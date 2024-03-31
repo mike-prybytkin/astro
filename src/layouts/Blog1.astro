@@ -1,0 +1,10 @@
+---
+const { title = 'Astro', frontmatter = {} } = Astro.props;
+
+const pageTitle = frontmatter.title || title;
+const pageText = frontmatter.text;
+---
+
+<h1>{pageTitle}</h1>
+<p>{pageText}</p>
+<slot />
